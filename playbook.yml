@@ -4,9 +4,9 @@
   become: yes
   vars:
     user1: "user"
-    user1pass: "Auh4tudo"
+    user1pass: "new_password"
     user2: "user2"
-    user2pass: "12345678"
+    user2pass: "password"
 
   tasks:
     - name: смена пароля
