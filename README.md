@@ -26,13 +26,4 @@ network:
           transmit-hash-policy: layer3+4
 ```
 ## Скрипт вотрого задания ##
-```
-echo "user:какой_то_пароль" | chpasswd  #Смена пароля пользователю user
-
-useradd -m -s /bin/bash user2  # Создание пользователя user2
-echo "user2:какой_то_пароль" | chpasswd  # Создание пароля пользователя user2
-
-sed -i 's/^#Port 22/Port 229/' /etc/ssh/sshd_config  # Расскоментировали и поменяли порт для ssh с стандартного на порт 229
-systemctl restart sshd # Перезапуск службы ssh
-ss -tlpn # Убеждаемся что порт изменился
-```
+Представлен в виде ansible-playbook.yml
