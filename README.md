@@ -33,6 +33,6 @@ useradd -m -s /bin/bash user2  # Создание пользователя user2
 echo "user2:какой_то_пароль" | chpasswd  # Создание пароля пользователя user2
 
 sed -i 's/^#Port 22/Port 229/' /etc/ssh/sshd_config  # Расскоментировали и поменяли порт для ssh с стандартного на порт 229
-systemctl restart sshd # Перезапус службы ssh
+systemctl restart sshd # Перезапуск службы ssh
 ss -tlpn # Убеждаемся что порт изменился
 ```
